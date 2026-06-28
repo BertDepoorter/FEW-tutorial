@@ -12,9 +12,9 @@ State of the art: aligned spin, slowly spinning primary, evolution chi1 and m1 i
 Waveform constructie:
 [EQ here]
 
-Two-timescale ananlysis: amplitudes evolueren traag, phases moeten heel nauwkeurig geintegreerd worden. 
+Two-timescale analysis: amplitudes evolueren traag, phases moeten heel nauwkeurig geïntegreerd worden. 
 
-Twee delen:
+Twee delen: harmonic mode decomposition and exploit GPU 
 
 fase: ODEs van forced geodesics
 
@@ -35,26 +35,26 @@ Waveform constructie: verschillende delen samenbrengen, roteren naar detector-fr
 ## FEW  (10 min install + 20 min walkthrough)
 
 Genereer zelfde waveform en toon visueel naast elkaar
-- speedups: mode selection, snelle interpolatie 
-- split in precomputed data - on the fly interpolatie via multi-dimensional splines -> very fast
+- speedups: mode selection, snelle interpolatie met splines
+- split in precomputed data - on the fly interpolatie via multi-dimensional splines -> very fast. 
 - Verschillende waveform modellen geïmplementeerd:
 	- Schwarzschild eccentric
 	- KerrEEccentricEquatorial
 	- frequency-domain waveform
 	- 5PN-AAK kludge waveform -> do not use
-
+- Outlook on the next waveform models, summarize Zach's slides op twee slides ofzo.
 ## Data analyse (30 min)
 
 Toon waveform visuals: time domain, frequency domain, time-frequency domain
+- Maak gif als in Ollie's repo.
+- Update mode content plots
+- Toon evolutie voor de waveform met mode selection threshold
 
-Toon $\dot \Phi_{mn}$ op spectrogram 
+Toon $\dot \Phi_{mn}$ op spectrogram and voeg gradueel meer modes toe. 
 
-Compute mismatch voor perturbatie van parameters
+Compute mismatch voor perturbatie van parameters: kleine PE test
 
-(Gebruik LWA approx voor respons en doe kleine PE run voor enkele parameters
-
-Kleine MCMC run voor primary mass en spin)
-
+Toon evolutie likelihood voor parameters en toon impact van secondary modes. 
 
 
 
