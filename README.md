@@ -1,6 +1,6 @@
+# FEW tutorial
+Tutorial for GW workshop in Leuven 7th of July 2026
 
-
-TODO: git repo maken voor de notebooks en environment
 ## Minimal_waveform_model (Robrecht Keijzer)
 
 A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All the main components for a full FEW model are present. Energy fluxes are from BHPT repo. Amplitudes are generated in a Mathematica notebook using the BHPT package.
@@ -9,7 +9,7 @@ A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All 
 
 ---------------
 
-## FEW  (10 min install + 20 min walkthrough)
+## FEW  (Bert Depoorter)
 
 Genereer zelfde waveform en toon visueel naast elkaar
 - speedups: mode selection, snelle interpolatie met splines
