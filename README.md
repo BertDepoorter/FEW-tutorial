@@ -1,34 +1,11 @@
 
-Presentatie - tutorial met FEW
-
 
 TODO: git repo maken voor de notebooks en environment
-## Inleiding (30 min)
+## Minimal_waveform_model (Robrecht Keijzer)
 
-Introductie EMRI waveforms: orbits, two-timescale expansion, 
-post-adiabatic waveforms -> toon effect op PE en bias
-State of the art: aligned spin, slowly spinning primary, evolution chi1 and m1 included
+A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All the main components for a full FEW model are present. Energy fluxes are from BHPT repo. Amplitudes are generated in a Mathematica notebook using the BHPT package.
 
-Waveform constructie:
-[EQ here]
 
-Two-timescale analysis: amplitudes evolueren traag, phases moeten heel nauwkeurig geïntegreerd worden. 
-
-Twee delen: harmonic mode decomposition and exploit GPU 
-
-fase: ODEs van forced geodesics
-
-[toon in code Robrecht]
-
-amplitudes: amplitude, spin-weighted spherical harmonics, polarizatie
-
-[toon in code Robrecht]
-
-Teukolsky eq. met bron 
-
-Flowchart maken hoe code doorlopen wordt. 
-
-Waveform constructie: verschillende delen samenbrengen, roteren naar detector-frame -> finale waveform
 
 ---------------
 
