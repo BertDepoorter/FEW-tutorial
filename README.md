@@ -1,5 +1,15 @@
 # FEW tutorial
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BertDepoorter/FEW-tutorial/blob/main/FEW_tutorial.ipynb)
+
 Tutorial for GW workshop in Leuven 7th of July 2026
+
+See [SETUP.md](SETUP.md) for local installation. To run in the browser with no
+install, click the **Open in Colab** badge above and run this in the first cell:
+
+```python
+!pip install fastemriwaveforms
+```
 
 ## Minimal_waveform_model (Robrecht Keijzer)
 
