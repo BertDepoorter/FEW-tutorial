@@ -3,7 +3,7 @@
 TODO: git repo maken voor de notebooks en environment
 ## Minimal_waveform_model
 
-A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All the main components for a full FEW model are present.
+A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All the main components for a full FEW model are present. Energy fluxes are from BHPT repo. Amplitudes are generated in a Mathematica notebook using the BHPT package.
 
 
 
