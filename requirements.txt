@@ -1,0 +1,15 @@
+
+fastemriwaveforms==2.0.0
+
+# Scientific computing
+numpy>=2.0
+scipy>=1.13
+matplotlib>=3.8
+tqdm>=4.0
+
+jupyterlab
+ipykernel
+
+# GPU acceleration: install
+#   pip install cupy-cuda12x
+#   pip install fastemriwaveforms-cuda12x
