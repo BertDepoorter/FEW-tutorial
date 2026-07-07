@@ -27,7 +27,7 @@ Click the badge, then run the first cell to install dependencies:
 
 For a local install instead:
 
-## Option B — conda 
+## Option B: conda 
 
 ```bash
 conda create -n few2.0.0 python=3.12.12 -y
@@ -36,7 +36,7 @@ pip install fastemriwaveforms
 pip install -r requirements.txt
 ```
 
-## Option C — uv
+## Option C: uv
 
 ```bash
 uv venv --python 3.12.12
@@ -44,7 +44,7 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 uv pip install -r requirements.txt
 ```
 
-## Option D — plain venv
+## Option D: venv
 
 ```bash
 python3.12 -m venv .venv
