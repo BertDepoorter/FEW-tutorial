@@ -4,44 +4,68 @@
 
 Tutorial for GW workshop in Leuven 7th of July 2026
 
-See [SETUP.md](SETUP.md) for local installation. To run in the browser with no
+See below for local installation. To run in the browser with no
 install, click the **Open in Colab** badge above and run this in the first cell:
 
 ```python
 !pip install fastemriwaveforms
 ```
 
-## Minimal_waveform_model (Robrecht Keijzer)
+# Setup
 
-A minimal waveform model for adiabatic quasi-circular Schwarzschild orbits. All the main components for a full FEW model are present. Energy fluxes are from BHPT repo. Amplitudes are generated in a Mathematica notebook using the BHPT package.
+The tutorial needs Python 3.12.12 and the [FastEMRIWaveforms](https://github.com/BlackHolePerturbationToolkit/FastEMRIWaveforms) package (`few`, v2.x). CPU-only is fine if you don't have a GPU, just slower. Only works with NVIDIA GPUs. 
 
+## Option A: Google Colab (no install)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BertDepoorter/FEW-tutorial/blob/main/FEW_tutorial.ipynb)
 
----------------
+Click the badge, then run the first cell to install dependencies:
 
-## FEW  (Bert Depoorter)
+```python
+!pip install fastemriwaveforms
+```
 
-Genereer zelfde waveform en toon visueel naast elkaar
-- speedups: mode selection, snelle interpolatie met splines
-- split in precomputed data - on the fly interpolatie via multi-dimensional splines -> very fast. 
-- Verschillende waveform modellen geïmplementeerd:
-	- Schwarzschild eccentric
-	- KerrEEccentricEquatorial
-	- frequency-domain waveform
-	- 5PN-AAK kludge waveform -> do not use
-- Outlook on the next waveform models, summarize Zach's slides op twee slides ofzo.
-## Data analyse (30 min)
+For a local install instead:
 
-Toon waveform visuals: time domain, frequency domain, time-frequency domain
-- Maak gif als in Ollie's repo.
-- Update mode content plots
-- Toon evolutie voor de waveform met mode selection threshold
+## Option B — conda 
 
-Toon $\dot \Phi_{mn}$ op spectrogram and voeg gradueel meer modes toe. 
+```bash
+conda create -n few2.0.0 python=3.12.12 -y
+conda activate few2.0.0
+pip install fastemriwaveforms
+pip install -r requirements.txt
+```
 
-Compute mismatch voor perturbatie van parameters: kleine PE test
+## Option C — uv
 
-Toon evolutie likelihood voor parameters en toon impact van secondary modes. 
+```bash
+uv venv --python 3.12.12
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+uv pip install -r requirements.txt
+```
 
+## Option D — plain venv
 
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
 
+## Run the notebook
+
+```bash
+jupyter lab FEW_tutorial.ipynb
+```
+
+The first time you run a waveform, `few` downloads its data files automatically (needs an internet connection). This is about 5 GB of precomputed data, which only needs to be dowloaded once. There are many options to manage the data storage location, see the [few documentation](https://bhptoolkit.org/FastEMRIWaveforms/user/cfg.html#file-storage-path). The default location will work just fine for most users. 
+
+## Check the install
+
+```bash
+python -c "import few; from few.waveform import FastKerrEccentricEquatorialFlux; print('FEW OK')"
+```
+
+## GPU (optional)
+
+FEW runs on CPU out of the box. To use an NVIDIA GPU, additionally install the CuPy wheel matching your CUDA toolkit, e.g. `pip install cupy-cuda12x`.
